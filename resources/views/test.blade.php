@@ -48,7 +48,7 @@
         </div>
     </div>
     <script>
-        var socket = new WebSocket('ws://192.168.1.149:8080')
+        var socket = new WebSocket('ws://192.168.1.102:8080')
 
         socket.onopen = function() {
             console.log("Соединение установлено.");
@@ -67,7 +67,7 @@
             console.log("Получены данные: " + event.data);
             data = {
                 message: "new room",
-                value: event.data,
+                text: event.data,
             }
             console.log("Получены данные " + JSON.stringify(data));
             document.getElementById('message').append(JSON.stringify(data));

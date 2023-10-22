@@ -37,7 +37,7 @@ Route::get('/room', function (\Illuminate\Http\Request $request) {
     }
     return view('room', 
         [
-            'id' => $request->input('id'), 
+            'chat_id' => $request->input('id'), 
             'room_name' => $roomName,
             'name' => $request->input('name')
         ]);
